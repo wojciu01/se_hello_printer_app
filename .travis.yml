@@ -7,4 +7,5 @@ install:
   - make deps
 
 script:
-  - make test    
+  - make lint
+  - make test
