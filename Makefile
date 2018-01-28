@@ -19,7 +19,7 @@ run:
 	python main.py
 
 docker_build:
-	docker build -t $(SERVICE_NAME)-dev .
+	docker build -t $(MY_DOCKER_NAME) .
 
 docker_run: docker_build
 			docker run \
