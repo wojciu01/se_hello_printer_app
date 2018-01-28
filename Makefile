@@ -36,6 +36,6 @@ TAG=$(USERNAME)/$(MY_DOCKER_NAME)
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
 	docker tag $(MY_DOCKER_NAME) $(TAG); \
-	docker tag $(MY_DOCKER_NAME) $(TAG):1.0.0; \
+	docker tag $(MY_DOCKER_NAME) $(TAG):$$(cat VERSION); \
 	docker push $(TAG); \
 	docker logout;
