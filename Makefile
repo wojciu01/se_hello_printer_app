@@ -31,7 +31,7 @@ docker_stop:
 	docker stop $(SERVICE_NAME)-dev:$(VERSION)
 
 USERNAME=brzeczunio
-TAG=$(USERNAME)/$(MYDOCKER_NAME)
+TAG=$(USERNAME)/$(MY_DOCKER_NAME):$(VERSION)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
