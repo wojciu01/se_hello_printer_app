@@ -1,5 +1,6 @@
 SERVICE_NAME=hello-world-printer
 MY_DOCKER_NAME=$(SERVICE_NAME)
+VERSION=1.0.0
 
 .PHONY: test
 .DEFAULT_GOAL := test
@@ -18,19 +19,19 @@ run:
 	python main.py
 
 docker_build:
-	docker build -t $(SERVICE_NAME)-dev .
+	docker build -t $(SERVICE_NAME)-dev:$(VERSION) .
 
 docker_run: docker_build
 			docker run \
-				--name $(SERVICE_NAME)-dev \
+				--name $(SERVICE_NAME)-dev:$(VERSION) \
 				 -p 5000:5000 \
 				 -d $(MY_DOCKER_NAME)
 
 docker_stop:
-	docker stop $(SERVICE_NAME)-dev
+	docker stop $(SERVICE_NAME)-dev:$(VERSION)
 
 USERNAME=brzeczunio
-TAG=$(USERNAME)/$(MYDOCKER_NAME)/version:1.0.0
+TAG=$(USERNAME)/$(MYDOCKER_NAME):$(VERSION)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
