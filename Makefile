@@ -1,6 +1,6 @@
 VERSION=1.0.0
-SERVICE_NAME=hello-world-printer:$(VERSION)
-MY_DOCKER_NAME=$(SERVICE_NAME)
+SERVICE_NAME=hello-world-printer
+MY_DOCKER_NAME=$(SERVICE_NAME):$(VERSION)
 
 .PHONY: test
 .DEFAULT_GOAL := test
