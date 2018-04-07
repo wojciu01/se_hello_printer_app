@@ -102,6 +102,7 @@ Pomocnicze
     atom ~/.bashrc # Dodajemy tam nasze skrypty np. source /usr/bin/virtualenvwrapper.sh
     Poleceniem bash odpalamy skrypty znajdujące się w pliku ~/.bashrc
 
+
 Materiały
 =========
 
@@ -135,6 +136,7 @@ Pozostałe
   ::
 
     workon wsb-simple-flask-app # Włącznie wirtualnego środowiska
+
 
 Dodanie deploymentu do heroku z maszyny dev
 ========
@@ -179,7 +181,7 @@ Dodanie deploymentu do heroku z maszyny dev
     # dodaj python-2.7.14
     cat runtime.txt
 
-- Przetestuj plik Procfile z pomocą heroku-cli (https://devcenter.heroku.com/articles/heroku-cli, typ: standalone, os: linux, arch: x64)
+- Przetestuj plik Procfile z pomocą heroku-cli (https://devcenter.heroku.com/articles/heroku-cli, typ: standalone, os: linux, arch: x64):
 
   ::
 
@@ -219,6 +221,7 @@ Dodanie deploymentu do heroku z maszyny dev
     heroku ps::scale web=0
     heroku ps::scale web=1
 
+
 Deployment do heroku z Travis-CI
 ========
 
@@ -236,3 +239,13 @@ Deployment do heroku z Travis-CI
   ::
 
     heroku auth:token
+
+  Wykonaj zmiany w programie i sprawdź czy są widoczne
+
+
+Prosty monitoring z Statuscake
+========
+
+- W tym ćwieczniu przygotowujemy do produkcji naszą palikację, w tym celu musimy przygotować monitoring. Budżet jest niski, terminy gonią, decydujemy się na prosty monitoring, który wykryje, kiedy jesteśmy offline - statuscake.com:
+
+  ::
