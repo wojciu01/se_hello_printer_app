@@ -249,3 +249,12 @@ Prosty monitoring z Statuscake
 - W tym ćwieczniu przygotowujemy do produkcji naszą palikację, w tym celu musimy przygotować monitoring. Budżet jest niski, terminy gonią, decydujemy się na prosty monitoring, który wykryje, kiedy jesteśmy offline - statuscake.com:
 
   ::
+
+    1. Przejdź do statuscake.com
+    2. Utwórz konto
+    3. Dodaj grupę kontaktową ze swoim email-em
+    4. Dodaj test:
+      - URL: url Twojej aplikacji
+      - Nazwa: dowolna
+      - Contact Group
+    5. Uaktualnij README.rst o informację o monitoring-u

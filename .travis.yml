@@ -17,4 +17,4 @@ script:
 deploy:
   provider: heroku
   app: arcane-lake-16874
-  api_kay: ${HEROKU_API_KEY}
+  api_key: ${HEROKU_API_KEY}
