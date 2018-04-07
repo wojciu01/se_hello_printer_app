@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from hello_world import app
 from formater import get_formatted
 from formater import SUPPORTED, PLAIN
