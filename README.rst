@@ -183,6 +183,13 @@ Dodanie deploymentu do heroku z maszyny dev
 
   ::
 
+    # trzeba wykonać następujące komendy instalujące heroku-cli
+    wget https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-linux-x64.tar.gz -O heroku.tar.gz
+    tar -xvzf heroku.tar.gz
+    mkdir -p /usr/local/lib /usr/local/bin
+    mv heroku-cli-v6.x.x-linux-x64 /usr/local/lib/heroku # heroku-cli-v6.x.x-linux-x64 -> nazwa pliku po rozpakowaniu. Jeżeli nie będzie widział pliku logujemy się na su i wykonujemy: mv /home/tester/heroku-cli-v6.16.8-ae149be-linux-x64/ /usr/local/lib/heroku
+    ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku # utworzenie powiązania symbolicznego czyli plik wygląda jakby był w dwóch lokalizacjach orginalnej i podanej
+
     #  jednym oknie terminala
     heroku local
 
