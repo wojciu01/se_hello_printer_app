@@ -112,20 +112,29 @@ Pozostałe
 ========
 
 1. Jako root:
-  yum install -y python-pip # instalator pakietów python
-  pip install -U pip
-  pip install virtualenv # pozwala na tworzenie wirtualnych środowisk
-  pip install virtualenvwrapper
+
+  ::
+
+    yum install -y python-pip # instalator pakietów python
+    pip install -U pip
+    pip install virtualenv # pozwala na tworzenie wirtualnych środowisk
+    pip install virtualenvwrapper
 
 2. Jako użytkownik:
-  atom ~/.bashrc -> source /usr/bin/virtualenvwrapper.sh
-  bash
-  mkvirtualenv wsb-simple-flask-app # Tworzymy nowe wirtualne środowisko
-  pip install -r requirements.txt # Instalujemy pakiety w naszym wirtualnym środowisku
-  pip install -r test_requirements.txt # Instalujemy pakiety dla testów w naszym wirtualnym środowisku
+
+  ::
+
+    atom ~/.bashrc -> source /usr/bin/virtualenvwrapper.sh
+    bash
+    mkvirtualenv wsb-simple-flask-app # Tworzymy nowe wirtualne środowisko
+    pip install -r requirements.txt # Instalujemy pakiety w naszym wirtualnym środowisku
+    pip install -r test_requirements.txt # Instalujemy pakiety dla testów w naszym wirtualnym środowisku
 
 3. Kontynuacja pracy z wirtualnym środowiskiem:
-  workon wsb-simple-flask-app # Włącznie wirtualnego środowiska
+
+  ::
+
+    workon wsb-simple-flask-app # Włącznie wirtualnego środowiska
 
 Dodanie deploymentu do heroku z maszyny dev
 ========
@@ -146,7 +155,7 @@ Dodanie deploymentu do heroku z maszyny dev
 
     cat requiremenets.txt
 
-- Przetestuj działanie
+- Przetestuj działanie:
 
   ::
 
@@ -155,3 +164,50 @@ Dodanie deploymentu do heroku z maszyny dev
 
     # w drugim oknie terminala
     curl 127.0.0.1:8000
+
+- Stwórz plik Procfile z jedną linią (bez rozszerzenia):
+
+  ::
+
+    web: gunicorn hello_world:app
+
+- Utwórz plik runtime.txt (patrz: https://devcenter.heroku.com/articles/python-runtimes#supported-python-runtimes):
+
+  ::
+
+    touch runtime.txt
+    # dodaj python-2.7.14
+    cat runtime.txt
+
+- Przetestuj plik Procfile z pomocą heroku-cli (https://devcenter.heroku.com/articles/heroku-cli, typ: standalone, os: linux, arch: x64)
+
+  ::
+
+    #  jednym oknie terminala
+    heroku local
+
+    # w drugim oknie terminala
+    curl 127.0.0.1:5000
+
+- Umieśćmy aplikację na platformie Heroku:
+
+  ::
+
+    heroku login
+
+    # create the app at the heroku side
+    heroku create
+
+    # przejdź do heroku dashboard
+
+    # heroku działa używając git-a:
+    git remote -v
+
+    # deploy
+    git push heroku master
+
+    # see from the log, what the url of your app is
+
+    # zauważ, możesz skalować instancje swojej aplikacji
+    heroku ps::scale web=0
+    heroku ps::scale web=1
