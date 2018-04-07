@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import unittest
 from hello_world import app
 from hello_world.formater import SUPPORTED
@@ -14,4 +16,4 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_output(self):
         rv = self.app.get('/?output=json')
-        self.assertEquals('{ "imie":"Damian", "mgs":"Hello World!"}', rv.data)
+        self.assertEquals('{ "imie":"Damian", "mgs":"jesteś zajebisty! :)"}', rv.data)
