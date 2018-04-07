@@ -202,7 +202,7 @@ Dodanie deploymentu do heroku z maszyny dev
 
     heroku login
 
-    # create the app at the heroku side
+    # create the app at the heroku side. Dodaje nowego brancha do gita
     heroku create
 
     # przejdź do heroku dashboard
@@ -210,7 +210,7 @@ Dodanie deploymentu do heroku z maszyny dev
     # heroku działa używając git-a:
     git remote -v
 
-    # deploy
+    # deploy. Zwraca ścieżkę z url-em do aplikacji
     git push heroku master
 
     # see from the log, what the url of your app is
