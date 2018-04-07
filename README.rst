@@ -126,3 +126,32 @@ Pozostałe
 
 3. Kontynuacja pracy z wirtualnym środowiskiem:
   workon wsb-simple-flask-app # Włącznie wirtualnego środowiska
+
+Dodanie deploymentu do heroku z maszyny dev
+========
+
+- Dodaj gunicorn do twojego pliku requirements.txt:
+
+  Pakiet gunicorn jest serwerem WWW, który można wykorzystać produkcyjnie.
+
+  ::
+
+    # aktywuj wcześniej virtualenv
+    echo 'gunicorn' >> requirements.txt
+    pip install -r requirements.txt
+
+  Sprawdź czy requirements.txt się zgadza:
+
+  ::
+
+    cat requiremenets.txt
+
+- Przetestuj działanie
+
+  ::
+
+    # w jednym oknie terminala
+    PYTHONPATH=$PYTHONPATH:$(pwd) gunicorn hello_world:app
+
+    # w drugim oknie terminala
+    curl 127.0.0.1:8000
