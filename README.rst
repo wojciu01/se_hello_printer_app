@@ -1,4 +1,5 @@
-<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=WSVD7LRwz0&Days=1000&Design=1" /></a>
+.. image:: https://app.statuscake.com/button/index.php?Track=WSVD7LRwz0&Days=1000&Design=1
+    :target: https://www.statuscake.com/
 
 .. image:: https://travis-ci.org/Brzeczunio/se_hello_printer_app.svg?branch=master
     :target: https://travis-ci.org/Brzeczunio/se_hello_printer_app
