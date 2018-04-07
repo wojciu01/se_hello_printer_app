@@ -48,7 +48,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
     ...
 
 
-- Odpalanie komend z pliku Makefile
+- Odpalanie komend z pliku Makefile:
 
   ::
 
@@ -95,13 +95,34 @@ Pomocnicze
     systemctl start docker
 
 
-- ~/.bashrc
+- ~/.bashrc:
 
   ::
 
-    Odpala skrypty po uruchomieniu polecenia bash
+    atom ~/.bashrc # Dodajemy tam nasze skrypty np. source /usr/bin/virtualenvwrapper.sh
+    Poleceniem bash odpalamy skrypty znajdujące się w pliku ~/.bashrc
 
 Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+Pozostałe
+========
+
+1. Jako root:
+  yum install -y python-pip # instalator pakietów python
+  pip install -U pip
+  pip install virtualenv # pozwala na tworzenie wirtualnych środowisk
+  pip install virtualenvwrapper
+
+2. Jako użytkownik:
+  atom ~/.bashrc -> source /usr/bin/virtualenvwrapper.sh
+  bash
+  mkvirtualenv wsb-simple-flask-app # Tworzymy nowe wirtualne środowisko
+  pip install -r requirements.txt # Instalujemy pakiety w naszym wirtualnym środowisku
+  pip install -r test_requirements.txt # Instalujemy pakiety dla testów w naszym wirtualnym środowisku
+
+3. Kontynuacja pracy z wirtualnym środowiskiem:
+  workon wsb-simple-flask-app # Włącznie wirtualnego środowiska
