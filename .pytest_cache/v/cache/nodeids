@@ -1,0 +1,5 @@
+[
+  "test/test_formater.py::TestFormater::test_plain_lowercase", 
+  "test/test_views.py::FlaskrTestCase::test_msg_with_output", 
+  "test/test_views.py::FlaskrTestCase::test_outputs"
+]
