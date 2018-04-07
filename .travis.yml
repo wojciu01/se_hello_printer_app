@@ -13,3 +13,8 @@ script:
   - make lint
   - make docker_build
   - make docker_push
+
+deploy:
+  provider: heroku
+  app: arcane-lake-16874
+  api_kay: ${HEROKU_API_KEY}

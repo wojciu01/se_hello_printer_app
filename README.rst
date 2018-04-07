@@ -218,3 +218,21 @@ Dodanie deploymentu do heroku z maszyny dev
     # zauważ, możesz skalować instancje swojej aplikacji
     heroku ps::scale web=0
     heroku ps::scale web=1
+
+Deployment do heroku z Travis-CI
+========
+
+- Przejdź do https://docs.travis-ci.com/user/deployment/heroku/, przejrzyj instrukcję jak z travisa aktualniać naszą aplikację na heroku. Dodaj na końcu .travis.yml, nazwę aplikacji znajdź w dashboardzie heroku:
+
+  ::
+
+    deploy:
+      provider: heroku
+      app: NAZWA TWOJEJ APLIKACJI
+      api_key: ${HEROKU_API_KEY}
+
+  W zakładce setting na travis-ci.org, dodaj zmienną HEROKU_API_KEY, wartość jest wynikiem następującej komendy:
+
+  ::
+
+    heroku auth:token
