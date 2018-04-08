@@ -15,6 +15,12 @@ lint:
 test:
 	python -m pytest --verbose -s
 
+test_cov:
+		python -m pytest --verbose -s --cov=.
+
+test_xunit:
+	python -m pytest -s --cov=. --junit-xml=test_results.xml
+
 run:
 	python main.py
 
