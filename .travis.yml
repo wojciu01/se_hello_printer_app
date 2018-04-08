@@ -14,7 +14,7 @@ script:
   - make docker_build
   - make docker_push
 
-#deploy:
-  #provider: heroku
-  #app: arcane-lake-16874
-  #api_key: ${HEROKU_API_KEY}
+deploy:
+  provider: heroku
+  app: secure-badlands-82664
+  api_key: ${HEROKU_API_KEY}
