@@ -1,4 +1,4 @@
-.. image:: https://app.statuscake.com/button/index.php?Track=WSVD7LRwz0&Days=1000&Design=1
+.. image:: https://app.statuscake.com/button/index.php?Track=vI8iU7bEui&Days=1&Design=3
     :target: https://app.statuscake.com/
 
 .. image:: https://travis-ci.org/wojciu01/se_hello_printer_app.svg?branch=master
