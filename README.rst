@@ -1,4 +1,5 @@
 .. image:: https://app.statuscake.com/button/index.php?Track=WSVD7LRwz0&Days=1000&Design=1
+    :target: https://app.statuscake.com/
 
 .. image:: https://travis-ci.org/Brzeczunio/se_hello_printer_app.svg?branch=master
     :target: https://travis-ci.org/Brzeczunio/se_hello_printer_app
@@ -259,4 +260,16 @@ Prosty monitoring z Statuscake
       - URL: url Twojej aplikacji
       - Nazwa: dowolna
       - Contact Group
-    5. Uaktualnij README.rst o informację o monitoring-u
+
+Badge StatusCake i Travis w READE.request
+========
+
+- Dodaj Badge z TravisCI i StatusCake:
+
+  ::
+
+  .. image:: https://app.statuscake.com/button/index.php?Track=WSVD7LRwz0&Days=1000&Design=1
+      :target: https://app.statuscake.com/
+
+  .. image:: https://travis-ci.org/Brzeczunio/se_hello_printer_app.svg?branch=master
+      :target: https://travis-ci.org/Brzeczunio/se_hello_printer_app
