@@ -305,8 +305,8 @@ Badge StatusCake i Travis w READE.request
   '.. image:: https://app.statuscake.com/button/index.php?Track=WSVD7LRwz0&Days=1&Design=6'
       ':target: https://app.statuscake.com/
 
-  '.. image:: https://travis-ci.org/Brzeczunio/se_hello_printer_app.svg?branch=master'
-      ':target: https://travis-ci.org/Brzeczunio/se_hello_printer_app'
+  '.. image:: https://travis-ci.org/wojciu01/se_hello_printer_app.svg?branch=master'
+      ':target: https://travis-ci.org/wojciu01/se_hello_printer_app'
 
 
 Test coverage
@@ -342,11 +342,3 @@ Test coverage
 
 - Wykorzystaj make test_xunit w .travis.yml
 
-- Bonus 1: wykorzystaj https://www.codeclimate.com/ do śledzenia metryk Twojego kodu
-
-- Bonus 2: Code complexity z radon (patrz: https://pypi.python.org/pypi/radon):
-
-  ::
-
-    pip install radon
-    radon cc hello_world
